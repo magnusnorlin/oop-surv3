@@ -12,10 +12,9 @@ class App {
 	//Används inte
     //this.surveys = new SurveyList();
 	console.log('app.class-constructor har körts');
-	console.log('vad är this.startPage nu?', this.startPage);
+	
 
-    // Add a page-content area in the DOM
-	// 
+    // Add a page-content area in the DOM	
     $('body').append('<div class="page-content"/>');
 
     // Some routes
@@ -27,8 +26,9 @@ class App {
       '/': ()=>{ this.showPage(this.startPage); },
       //'/survey/:id': (props)=>{ new Survey(props, this.showPage); }
 	  
-	  // props är här id1 från den länk vi klickat på, t.ex http://localhost:3000/survey/1
+	  // props är här id(1) från den länk vi klickat på, t.ex http://localhost:3000/survey/1
 	  // skickas med som argument till construktor i SurveyPage
+	  // showPage() skickas med som callback-funktion
       '/survey/:id': (props)=>{ new SurveyPage(props, this.showPage); }
 
       // examples:
