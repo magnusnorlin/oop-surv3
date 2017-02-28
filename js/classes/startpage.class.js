@@ -12,7 +12,7 @@ class StartPage extends Base {
 	// this.surveys är listan med fem olika länkar
 	// http://localhost:3000/survey/1
 	// http://localhost:3000/survey/2 osv
-	//
+	// i html-temp ${this.surveys.display()}, gör att listan visas
     this.surveys = new SurveyList();
 	
   }

@@ -7,6 +7,7 @@ class SurveyList extends List {
 
   readAllFromDb(callback){
     this.db.readAll((data)=>{
+		// this.push, push görs på List, som surveyList extendar
       this.push.apply(this,data);
       callback && callback();
     });
