@@ -1,0 +1,11 @@
+SurveyPage.addTemplate('default',function(){return `
+  <div class="container">
+    <h1>${this.survey.name}</h1>
+
+    <form data-submit="saveResponse">
+      ${this.questions.display()}
+      <button type="submit" class="btn btn-default">Skicka</button>
+    </form>
+  </div>
+
+`});
